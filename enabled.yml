@@ -78,6 +78,10 @@ Layout/AlignParameters:
   StyleGuide: '#no-double-indent'
   Enabled: true
 
+Layout/BlockAlignment:
+  Description: 'Align block ends correctly.'
+  Enabled: true
+
 Layout/BlockEndNewline:
   Description: 'Put end statement of multiline block on its own line.'
   Enabled: true
@@ -93,6 +97,17 @@ Layout/ClosingParenthesisIndentation:
 
 Layout/CommentIndentation:
   Description: 'Indentation of comments.'
+  Enabled: true
+
+Layout/ConditionPosition:
+  Description: >-
+                 Checks for condition placed in a confusing position relative to
+                 the keyword.
+  StyleGuide: '#same-line-condition'
+  Enabled: true
+
+Layout/DefEndAlignment:
+  Description: 'Align ends corresponding to defs correctly.'
   Enabled: true
 
 Layout/DotPosition:
@@ -156,6 +171,10 @@ Layout/EmptyLinesAroundMethodBody:
 Layout/EmptyLinesAroundModuleBody:
   Description: "Keeps track of empty lines around module bodies."
   StyleGuide: '#empty-lines-around-bodies'
+  Enabled: true
+
+Layout/EndAlignment:
+  Description: 'Align ends correctly.'
   Enabled: true
 
 Layout/EndOfLine:
@@ -428,10 +447,6 @@ Lint/BigDecimalNew:
   Description: '`BigDecimal.new()` is deprecated. Use `BigDecimal()` instead.'
   Enabled: true
 
-Lint/BlockAlignment:
-  Description: 'Align block ends correctly.'
-  Enabled: true
-
 Lint/BooleanSymbol:
   Description: 'Check for `:true` and `:false` symbols.'
   Enabled: true
@@ -440,19 +455,8 @@ Lint/CircularArgumentReference:
   Description: "Default values in optional keyword arguments and optional ordinal arguments should not refer back to the name of the argument."
   Enabled: true
 
-Lint/ConditionPosition:
-  Description: >-
-                 Checks for condition placed in a confusing position relative to
-                 the keyword.
-  StyleGuide: '#same-line-condition'
-  Enabled: true
-
 Lint/Debugger:
   Description: 'Check for debugger calls.'
-  Enabled: true
-
-Lint/DefEndAlignment:
-  Description: 'Align ends corresponding to defs correctly.'
   Enabled: true
 
 Lint/DeprecatedClassMethods:
@@ -494,10 +498,6 @@ Lint/EmptyInterpolation:
 
 Lint/EmptyWhen:
   Description: 'Checks for `when` branches with empty bodies.'
-  Enabled: true
-
-Lint/EndAlignment:
-  Description: 'Align ends correctly.'
   Enabled: true
 
 Lint/EndInMethod:
@@ -962,14 +962,6 @@ Performance/FlatMap:
   # `flatten` being called without any parameters.
   # This can be dangerous since `flat_map` will only flatten 1 level, and
   # `flatten` without any parameters can flatten multiple levels.
-
-Performance/HashEachMethods:
-  Description: >-
-                 Use `Hash#each_key` and `Hash#each_value` instead of
-                 `Hash#keys.each` and `Hash#values.each`.
-  StyleGuide: '#hash-each'
-  Enabled: true
-  AutoCorrect: false
 
 Performance/LstripRstrip:
   Description: 'Use `strip` instead of `lstrip.rstrip`.'
