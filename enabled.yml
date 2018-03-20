@@ -1418,13 +1418,6 @@ Style/Dir:
                  absolute path to the current file.
   Enabled: true
 
-Style/Documentation:
-  Description: 'Document classes and non-namespace modules.'
-  Enabled: true
-  Exclude:
-    - 'spec/**/*'
-    - 'test/**/*'
-
 Style/DoubleNegation:
   Description: 'Checks for uses of double negation (!!).'
   StyleGuide: '#no-bang-bang'
@@ -1502,12 +1495,6 @@ Style/FormatString:
 
 Style/FormatStringToken:
   Description: 'Use a consistent style for format string tokens.'
-  Enabled: true
-
-Style/FrozenStringLiteralComment:
-  Description: >-
-                 Add the frozen_string_literal comment to the top of files
-                 to help transition from Ruby 2.3.0 to Ruby 3.0.
   Enabled: true
 
 Style/GlobalVars:
@@ -1759,11 +1746,6 @@ Style/ParenthesesAroundCondition:
                  Don't use parentheses around the condition of an
                  if/unless/while.
   StyleGuide: '#no-parens-around-condition'
-  Enabled: true
-
-Style/PercentLiteralDelimiters:
-  Description: 'Use `%`-literal delimiters consistently'
-  StyleGuide: '#percent-literal-braces'
   Enabled: true
 
 Style/PercentQLiterals:
